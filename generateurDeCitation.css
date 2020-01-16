@@ -1,0 +1,72 @@
+body {
+    background: #282a36;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    margin-top: 50px;
+    max-width: 500px;
+    border-radius: 4px;
+    font-family: 'Lobster', cursive;
+    background-color: lightgray;
+}
+
+.button {
+    width: 30%;
+    height: 50px;
+    top: 35%;
+    background-color: #01D758;
+    color: white;
+    padding: 0.8em;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+.button:hover {
+    background-color: #40E0D0;
+}
+
+.button:hover .tooltip {
+    opacity: 1;
+    transform: translateY(100%);
+}
+
+.button:active {
+    background-color: #ddd;
+}
+
+.button:focus {
+    outline: none;
+}
+
+blockquote {
+    font-family: 'Courgette', cursive;
+}
+
+.tooltip {
+    position: center;
+    background: lightgray;
+    color: black;
+    font-family: 'Lobster', cursive;
+    border-radius: 4px;
+    padding: 0.4em;
+    transform: translateY(100%);
+    /* Y pour Animation de haut en bas , sinon X pour gauche à droite */
+    opacity: 0;
+    font-size: 0.7em;
+    /* Taille de police */
+    transition: 220ms;
+}
+
+.tooltip:before {
+    color: lightgray;
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    border-bottom: 8px solid #f8f8f2;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+}
