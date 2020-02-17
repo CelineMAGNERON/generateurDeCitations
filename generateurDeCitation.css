@@ -1,4 +1,6 @@
 body {
+    width: 500px;  
+    margin: auto;
     background: #282a36;
     justify-content: center;
     align-content: center;
