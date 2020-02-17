@@ -3,7 +3,6 @@ body {
     margin: auto;
     background: #282a36;
     text-align: center;
-    align-content: center;
     min-height: 100vh;
 }
 
@@ -11,12 +10,14 @@ body {
     padding-top : 10px;
     margin-top: 50px;
     max-width: 500px;
-    border-radius: 4px;
+    border-radius: 4px; /*Arrondi les angles*/
     font-family: 'Lobster', cursive;
     background-color: lightgray;
 }
 
 .button {
+    padding: auto;
+    text-align: center;
     width: 30%;
     height: 50px;
     top: 35%;
@@ -25,18 +26,22 @@ body {
     padding: 0.8em;
     border: none;
     border-radius: 4px;
+    font-family: 'Lobster', cursive;
     font-size: 18px;
+    margin-bottom:35px;
 }
 
 .button:hover {
     background-color: #40E0D0;
 }
 
+/*Au survol du bouton*/
 .button:hover .tooltip {
     opacity: 1;
     transform: translateY(100%);
 }
 
+/*Au clic du bouton*/
 .button:active {
     background-color: #ddd;
 }
@@ -50,18 +55,21 @@ blockquote {
 }
 
 .tooltip {
-    position: center;
+    position: absolute;
+    margin-left: -15px;
+    margin-top: -2px;
     background: lightgray;
     color: black;
     font-family: 'Lobster', cursive;
     border-radius: 4px;
     padding: 0.4em;
+    /*Animation : Y pour de haut en bas, sinon X pour gauche à droite   */
     transform: translateY(100%);
-    /* Y pour Animation de haut en bas , sinon X pour gauche à droite */
-    opacity: 0;
-    font-size: 0.7em;
+        opacity: 0;
     /* Taille de police */
-    transition: 220ms;
+    font-size: 0.7em;
+    /* Délai d'apparition */
+    transition: 600ms;
 }
 
 .tooltip:before {
